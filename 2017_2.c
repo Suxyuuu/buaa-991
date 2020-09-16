@@ -2,12 +2,12 @@
 #include <string.h>
 #include <stdlib.h>
 /*
-* ¶ÁÈ¡Ò»¸ö×Ö·û´® Ê¶±ğÆäÖĞµÄÊı×Ö×Ö·û²¢½«Æä×ª»¯ÎªÕûĞÍ(²»¿ÉÊ¹ÓÃatoiº¯Êı) ½«Êı×Ö´Ó´óµ½Ğ¡Êä³ö
+* è¯»å–ä¸€ä¸ªå­—ç¬¦ä¸² è¯†åˆ«å…¶ä¸­çš„æ•°å­—å­—ç¬¦å¹¶å°†å…¶è½¬åŒ–ä¸ºæ•´å‹(ä¸å¯ä½¿ç”¨atoiå‡½æ•°) å°†æ•°å­—ä»å¤§åˆ°å°è¾“å‡º
 */
 
-void stoi(char(* nums)[20], int numi[20], int count);   //×Ö·û×ªÊı×Ö
-void output(int* numi, int count);                   //ÅÅĞò²¢Êä³ö
-int comp(const void *a, const void *b);                 //¿ìÅÅ±È½Ïº¯Êı
+void stoi(char(* nums)[20], int numi[20], int count);   //å­—ç¬¦è½¬æ•°å­—
+void output(int* numi, int count);                   //æ’åºå¹¶è¾“å‡º
+int comp(const void *a, const void *b);                 //å¿«æ’æ¯”è¾ƒå‡½æ•°
 
 int main(void){
     

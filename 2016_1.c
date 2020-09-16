@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-// ÊµÏÖc¿âº¯Êıstrcmp
-// ÒªÇó: ²»ÄÜÊ¹ÓÃc¿âÖĞ×Ö·û´®º¯Êı
+// å®ç°cåº“å‡½æ•°strcmp
+// è¦æ±‚: ä¸èƒ½ä½¿ç”¨cåº“ä¸­å­—ç¬¦ä¸²å‡½æ•°
 
 int strcmp(char* a, char* b);
 int main(void){

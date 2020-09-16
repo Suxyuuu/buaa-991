@@ -2,8 +2,8 @@
 #include <string.h>
 #define MAXSIZE 100
 /* 
-* ÇóÄ³¸ö³¤×Ö·û´®ÖĞÖ¸¶¨×Ö·û´®³öÏÖµÄÆµÂÊ
-* Èç abcdefgdefkd ÖĞ def Îª2´Î  aaaa ÖĞ aa Îª3´Î
+* æ±‚æŸä¸ªé•¿å­—ç¬¦ä¸²ä¸­æŒ‡å®šå­—ç¬¦ä¸²å‡ºç°çš„é¢‘ç‡
+* å¦‚ abcdefgdefkd ä¸­ def ä¸º2æ¬¡  aaaa ä¸­ aa ä¸º3æ¬¡
 */
 int freqs(char* source, char* destination);
 int main(void){
