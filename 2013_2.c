@@ -1,7 +1,7 @@
+// 求出字符串s和t的公共最长单词(每个字符串均有英文字母和空格字符组成), 否则返回null 注意: 不得设置保存单词的存储空间
+
 #include <stdio.h>
 #define MAXSIZE 100
-
-// 求出字符串s和t的公共最长单词(每个字符串均有英文字母和空格字符组成), 否则返回null 注意: 不得设置保存单词的存储空间
 
 char * maxword(char * s, char * t);
 int main(void){

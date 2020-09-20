@@ -1,7 +1,7 @@
-#include <stdio.h>
-
 // 实现c库函数strcmp
 // 要求: 不能使用c库中字符串函数
+
+#include <stdio.h>
 
 int strcmp(char* a, char* b);
 int main(void){

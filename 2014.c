@@ -1,8 +1,8 @@
+// 求某个长字符串中指定字符串出现的频率 要求所有的字符串操作用指针完成!
+
 #include <stdio.h>
 #include <string.h>
 #define MAXSIZE 100
-
-// 求某个长字符串中指定字符串出现的频率 要求所有的字符串操作用指针完成!
 
 int STRCOUNT(char* source, char* destination);
 int main(void){

@@ -1,6 +1,6 @@
-#include <stdio.h>
-
 // sum=1^a+2^a+...+n^a
+
+#include <stdio.h>
 
 int psum(int a, int n);
 int pow(int x, int exp);

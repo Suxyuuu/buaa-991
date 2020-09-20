@@ -1,9 +1,10 @@
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 /*
 * 读取一个字符串 识别其中的数字字符并将其转化为整型(不可使用atoi函数) 将数字从大到小输出
 */
+
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
 void stoi(char(* nums)[20], int numi[20], int count);   //字符转数字
 void output(int* numi, int count);                   //排序并输出

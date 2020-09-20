@@ -1,7 +1,7 @@
-#include <stdio.h>
-
 // 将用户通过键盘输入的若干字符(EOF结束, windows下为CTRL+Z)存入一维数组s中, 输入其中ascii码最大的字符及其axcii码值
 // 要求: 操作使用指针完成
+
+#include <stdio.h>
 
 int main(void){
 

@@ -1,10 +1,12 @@
-#include <stdio.h>
-#include <string.h>
-#define MAXSIZE 100
 /* 
 * 求某个长字符串中指定字符串出现的频率
 * 如 abcdefgdefkd 中 def 为2次  aaaa 中 aa 为3次
 */
+
+#include <stdio.h>
+#include <string.h>
+#define MAXSIZE 100
+
 int freqs(char* source, char* destination);
 int main(void){
     char source[MAXSIZE]="accdefgdefkdxefaaaa";

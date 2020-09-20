@@ -1,7 +1,3 @@
-#include <stdio.h>
-#include <string.h>
-#define MAXSIZE 2000
-
 /*
 * 检查FASTQ文件格式是否合规
 * a. 以四行为一组.
@@ -11,6 +7,10 @@
 * e. 第四行所用字符其ascii码值需在33到126之间且总个数与第二行相同
 * 任意一条不符合, 则不合规
 */
+
+#include <stdio.h>
+#include <string.h>
+#define MAXSIZE 2000
 
 int judgefline(char* buff);
 int judgesline(char* buff, int* secondnum);

@@ -1,6 +1,6 @@
-#include <stdio.h>
-
 // 递归计算1+2+3+...+n
+
+#include <stdio.h>
 
 int fun(int n);
 int main(void){

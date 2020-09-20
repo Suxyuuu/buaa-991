@@ -1,7 +1,7 @@
+// 输出字母串中某个字符第一次出现的位置, 并将其删除, 输出删除前和删除后的字符串(若不存在该字符,则输出提示信息)
+
 #include <stdio.h>
 #include <string.h>
-
-// 输出字母串中某个字符第一次出现的位置, 并将其删除, 输出删除前和删除后的字符串(若不存在该字符,则输出提示信息)
 
 void solve(const char * bef, char key, char * aft);
 int main(void){

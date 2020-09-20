@@ -1,8 +1,3 @@
-#include <stdio.h>
-#include <string.h>
-#include <ctype.h>
-#include <stdlib.h>
-
 /*
 * 读取文件D:/score.dat(其中每行为一个学生的数据, 学生姓名(纯英文)和学生成绩(包含小数), 中间用 \t 隔开)
 * 若学生人数小于3, 输出所有信息. 否则, 输出平均分数并输出前三名的学生信息
@@ -11,6 +6,11 @@
 *   lisi    78
 *   wangwu  90
 */
+
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+#include <stdlib.h>
 
 struct StudentInfo
 {

@@ -1,7 +1,7 @@
+/* 求某年某月某日为星期几(已知1.1.1为周一) */
+
 #include <stdio.h>
 #include <windows.h>
-
-/* 求某年某月某日为星期几(已知1.1.1为周一) */
 
 int get_weekday(int year, int month, int day);
 int ping[12]={31,28,31,30,31,30,31,31,30,31,30,31};

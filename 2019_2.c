@@ -1,12 +1,13 @@
-#include <stdio.h>
-#include <string.h>
-#include <windows.h>
-#include <ctype.h>
 /*
 * 读取文件中的单词(不超过100个) 每个单词小于20个字母
 * 若与所给目标单词字母相同但顺序不同则符合乱序词要求, 例如 listen 和 slient
 * 将符合要求的乱序词按照字母表升序输出(相同单词只输出一次)
 */
+#include <stdio.h>
+#include <string.h>
+#include <windows.h>
+#include <ctype.h>
+
 void judgeword(char *wordpoint[], char word[][21], int wordnum, char sourseword[],int *realnum);
 void sortstr(char *wordpoint[], int num);
 int main(void){
