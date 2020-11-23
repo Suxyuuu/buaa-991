@@ -24,6 +24,7 @@ int get_weekday(int year, int month, int day)
     // 1.2.1--Thu
     // 2020.11.23--Mon
     int day_sum = 0;
+    // 计算当年前n年的总天数
     for (int i = 1; i < year; i++)
     {
         if (i % 400 == 0 || (i % 4 == 0 && i % 100 != 0))
@@ -35,10 +36,12 @@ int get_weekday(int year, int month, int day)
             day_sum += 365;
         }
     }
+    // 计算当月前n月的天数(最后一个月直接加即可)
     for (int i = 1; i < month; i++)
     {
         if (i == 2)
         {
+            // 如果是闰年
             if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0))
             {
                 day_sum += 29;
