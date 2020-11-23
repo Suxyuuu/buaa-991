@@ -4,61 +4,75 @@
 #include <windows.h>
 
 int get_weekday(int year, int month, int day);
-int ping[12]={31,28,31,30,31,30,31,31,30,31,30,31};
-int run[12]={31,29,31,30,31,30,31,31,30,31,30,31};
-char weekday[7][4]={"Sun","Mon","Tue","Wen","Thu","Fri","Sat"};
 
-int main(void){
+int main(void)
+{
 
     int year, month, day;
+    fputs("Date:", stdout);
+    scanf("%4d %2d %2d", &year, &month, &day);
 
-    while(1){
-        fputs("Date:",stdout);
-        scanf("%4d %2d %2d",&year,&month,&day);
-        
-        printf("%d.%d.%d: ",year,month,day);
-
-        int a=get_weekday(year, month, day);
-        printf("%s\n",weekday[a]);
-    }
+    printf("%d.%d.%d: ", year, month, day);
+    printf("%d\n", get_weekday(year, month, day));
 
     return 0;
 }
 
-int get_weekday(int year, int month, int day){
-    //1.1.1--Mon
-    int day_num=0;
-    for(int y=1;y<year;y++){
-        if(y%400==0){
-            day_num+=366;
-        }
-        else if(y%100!=0 && y%4==0){
-            day_num+=366;
-        }
-        else{
-            day_num+=365;
-        }
-    }
-    if (year%400==0)
+int get_weekday(int year, int month, int day)
+{
+    // 1.1.1--Mon
+    // 1.2.1--Thu
+    // 2020.11.23--Mon
+    int day_sum = 0;
+    for (int i = 1; i < year; i++)
     {
-        for (int i = 0; i < month-1; i++)
+        if (i % 400 == 0 || (i % 4 == 0 && i % 100 != 0))
         {
-            day_num+=run[i];
+            day_sum += 366;
+        }
+        else
+        {
+            day_sum += 365;
         }
     }
-    else if(year%100!=0 && year%4==0){
-        for (int i = 0; i < month-1; i++)
+    for (int i = 1; i < month; i++)
+    {
+        if (i == 2)
         {
-            day_num+=run[i];
+            if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0))
+            {
+                day_sum += 29;
+            }
+            else
+            {
+                day_sum += 28;
+            }
+        }
+        else
+        {
+            switch (i)
+            {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                day_sum += 31;
+                break;
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                day_sum += 30;
+                break;
+            default:
+                break;
+            }
         }
     }
-    else{
-        for (int i = 0; i < month-1; i++)
-        {
-            day_num+=ping[i];
-        }
-    }
-    day_num+=day;
+    day_sum += day;
 
-    return day_num%7;
+    return (day_sum % 7 == 0) ? 7 : (day_sum % 7);
 }
