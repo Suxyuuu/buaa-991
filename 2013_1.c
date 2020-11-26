@@ -3,32 +3,33 @@
 #include <stdio.h>
 #define MAXNUM 100
 
-int main(void){
+int main(void)
+{
 
     int a[MAXNUM];
-    int * p=a;
-    int * pos=a;
+    int *p = a;
+    int *pos = a;
     for (int i = 0; i < MAXNUM; i++)
     {
-        scanf("%d", p+i);
+        scanf("%d", p + i);
     }
     for (int i = 0; i < MAXNUM; i++)
     {
-        if (*pos > *(p+i))
+        if (*pos > *(p + i))
         {
-            pos=p+i;    
+            pos = p + i;
         }
     }
-    while (pos!=p+MAXNUM)
+    while (pos != p + MAXNUM - 1)
     {
-        *(pos)=*(pos+1);
+        *(pos) = *(pos + 1);
         pos++;
     }
-    for (int i = 0; i < MAXNUM-1; i++)
+    for (int i = 0; i < MAXNUM - 1; i++)
     {
         printf("%d\n", *(p++));
     }
-    
+
     getchar();
     getchar();
     return 0;
